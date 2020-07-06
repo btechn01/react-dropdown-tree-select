@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { TextField } from '@material-ui/core'
 import PropTypes from 'prop-types'
 import { debounce } from '../utils'
 import { getAriaLabel } from '../a11y'
@@ -33,7 +34,7 @@ class Input extends PureComponent {
     const { inputRef, texts = {}, onFocus, onBlur, disabled, readOnly, onKeyDown, activeDescendant } = this.props
 
     return (
-      <input
+      <TextField
         type="text"
         disabled={disabled}
         ref={inputRef}
